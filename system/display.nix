@@ -1,8 +1,9 @@
 {
-config,
-pkgs,
-...
-} : {
+  config,
+  pkgs,
+  ...
+}:
+{
 
   services.xserver.enable = true;
 
@@ -29,13 +30,7 @@ pkgs,
   # I don't need waybar as of now
   # programs.waybar.enable = true;
   environment.systemPackages = with pkgs; [
-    nerd-fonts.departure-mono
     wl-clipboard
-    quickshell
-    bibata-cursors
-    swaybg
-    grim
-    slurp
     (sddm-astronaut.override {
       embeddedTheme = "astronaut"; # or any other theme
     })

@@ -9,17 +9,18 @@
   # paths it should manage.
   imports = [
     (import ./walker { inherit config pkgs inputs; })
+    ./display
     ./wlogout
     ./bash
     ./git
+    ./language
+    ./editors
+    ./terminal
   ];
   home.username = "maskduck";
   home.homeDirectory = "/home/maskduck";
   home.packages = with pkgs; [
     nerd-fonts.blex-mono
-    nixd
-    nixfmt
-    stylua
     fastfetch
 
   ];

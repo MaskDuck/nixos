@@ -6,8 +6,14 @@
 {
   programs.git = {
     enable = true;
-    userName = "MaskDuck";
-    userEmail = "70831061+MaskDuck@users.noreply.github.com";
+    settings = {
+      user = {
+        name = "MaskDuck";
+        email = "70831061+MaskDuck@users.noreply.github.com";
+      };
+    };
+    # userName = "MaskDuck";
+    # userEmail = "";
   };
 
   programs.gh = {
